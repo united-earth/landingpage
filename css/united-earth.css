@@ -70,6 +70,10 @@ iframe {
   max-width: 100%;
 }
 
+.invitation {
+  text-align: justify;
+}
+
 .newsletter-fixed {
   position: none;
   top: 0;
