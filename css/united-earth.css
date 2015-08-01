@@ -127,6 +127,11 @@ iframe {
   column-gap:           0px;
 }
 
+.fifty-fifty img {
+  width: 50%;
+  float: right;
+}
+
 .photos img {
   /* Just in case there are inline attributes */
   width: 100% !important;
@@ -152,5 +157,8 @@ iframe {
   -moz-column-count:    1;
   -webkit-column-count: 1;
   column-count:         1;
+  }
+  .fifty-fifty img {
+    width: 100%;
   }
 }
