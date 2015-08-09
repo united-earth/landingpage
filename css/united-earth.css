@@ -5,6 +5,10 @@ video#bgvid {
   background-size: cover;
 }
 
+.bg-primary{
+  background-color: #005401 !important;
+}
+
 header.header {
   background: none;
   height: 77%;
@@ -46,7 +50,12 @@ header.header img {
 .box:before{
 	content: "";
 	display: block;
-	padding-top: 56.25%; 	/* initial ratio of 1:1*/
+	padding-top: 51.25%; 	/* initial ratio of 1:1*/
+}
+
+#quote{
+  background-color: #293351;
+  color: #b1c778;
 }
 
 .content{
