@@ -24,9 +24,17 @@ header.header img {
 
 #survey {
   padding: 50px 0;
+  background: url(../img/survey-background.png) center;
+  background-size: cover;
+  color: black;
 }
 #survey h1{
   margin: 70px 0;
+}
+
+#survey .container {
+  background: white;
+  padding: 16px;
 }
 
 #survey iframe {
