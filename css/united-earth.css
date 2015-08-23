@@ -39,7 +39,6 @@ header.header img {
 }
 #survey h2{
   margin: 70px 0;
-  color: white;
   font-size: 50px;
 }
 
@@ -96,8 +95,8 @@ header.header img {
 }
 
 .iframe-sizing {
-  width: 720px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 720px;
 }
 
 .invitation {
