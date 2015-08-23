@@ -5,9 +5,6 @@ video#bgvid {
   background-size: cover;
 }
 
-.bg-primary{
-  background-color: #005401 !important;
-}
 
 header.header {
   background: none;
@@ -20,6 +17,18 @@ header.header img {
 
 .introduction {
   text-align: justify;
+}
+
+#about {
+  background-color: black;
+}
+
+#about h2 {
+  font-size: 50px;
+}
+
+#about .video-js {
+  margin: 50px 0;
 }
 
 #survey {
@@ -63,7 +72,8 @@ header.header img {
 
 #quote{
   background-color: #293351;
-  color: #b1c778;
+  color: white;
+  padding: 65px 0;
 }
 
 .content{

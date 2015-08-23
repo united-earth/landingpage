@@ -25,50 +25,15 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/jssor.slider.mini.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/united-earth.js" type="text/javascript"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
 
 </head>
 
 <body>
-  <script>
-    var sliders = {};
-    jssor_slider_starter = function (containerId) {
-        var options = { $AutoPlay: true };
-        sliders[containerId] = (new $JssorSlider$(containerId, options));
-    };
-
-
-    jQuery(document).ready(function ($) {
-        //responsive code begin
-        //you can remove responsive code if you don't want the slider scales
-        //while window resizes
-        function ScaleSliders() {
-            for(var containerId in sliders){
-              var parentWidth = $('#' + containerId).parent().width();
-              if (parentWidth) {
-                  sliders[containerId].$ScaleWidth(parentWidth);
-              }
-              else
-                  window.setTimeout(ScaleSliders, 30);
-            }
-        }
-        //Scale slider after document ready
-        ScaleSliders();
-
-        //Scale slider while window load/resize/orientationchange.
-        $(window).bind("load", ScaleSliders);
-        $(window).bind("resize", ScaleSliders);
-        $(window).bind("orientationchange", ScaleSliders);
-        //responsive code end
-    });
-  </script>
   <video autoplay loop poster="img/bg.jpg" id="bgvid" onclick="document.getElementById('bgvid').play()">
     <source src="bg.mp4" type="video/mp4">
   </video>
@@ -137,81 +102,78 @@
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2>Why A United Earth?</h2>
-                    <hr class="small">
 
-                    <div class="introduction">
-                      <p>
-                        The welfare of all Life on Earth hangs in the balance. Humanity is now at the crux of an evolutionary cross-roads where, as a species, we need to make a collective choice: We can either continue on this same path of competition, degradation and quantitative thought or we can take an entirely new direction towards cooperation, healing and qualitative thought. The first merely requires us to continue placing our trust in our political leaders and to keep doing what we are already doing- even by "being the change".. The latter requires an unprecedented approach. To fundamentally alter the course of human society <i>as a whole</i> will require nothing less than intelligent, humble and innovative collaboration on a global scale.
-                      </p>
-                      <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
-                        <!-- Slides Container -->
-                        <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
-                            <div><img u="image" src="img/intro1.jpg" /></div>
-                            <div><img u="image" src="img/intro1-1.jpg" /></div>
-                            <div><img u="image" src="img/intro1-2.jpg" /></div>
-                            <div><img u="image" src="img/intro1-3.jpg" /></div>
-                        </div>
-                        <!-- Trigger -->
-                        <script>jssor_slider_starter('slider1_container');</script>
-                      </div>
+                    <video id="intro-video" controls preload="none" data-setup="{}" class="video-js vjs-default-skin" width="auto" height="500px">
+                      <source src="intro.m4v" type="video/x-m4v">
+                    </video>
 
-                      <p>
-                        Today there are hundreds of millions of people and hundreds of thousands of groups around the world working to create a brighter future for all Life. We are in the midst of what has been called The Great Turning or The Great Transition. Most people and all the groups pioneering and guiding this Transition are connected to the World-Wide Web, thus there exists a clear, yet latent potential for us to work together for a common cause and vision.
-                      </p>
-                      <!--
-                      <div id="slider2">
-                        <img src="img/intro2.jpg">
-                        <img src="img/intro2-2.jpg">
-                        <img src="img/intro2-3.jpg">
-                        <img src="img/intro2-1.jpg">
-                      </div>-->
+                    <h3>Translations</h3>
+                    <button id="en-button" class="btn btn-primary">
+                      EN
+                    </button>
+                    <button id="fr-button" class="btn btn-primary">
+                      FR
+                    </button>
+                    <button id="es-button" class="btn btn-primary">
+                      ES
+                    </button>
+                    <button id="de-button" class="btn btn-primary">
+                      DE
+                    </button>
+
+                    <div class="introduction collapse" id="en">
+                      <p>The welfare of all Life on Earth hangs in the balance. Humanity is now at the crux of an evolutionary cross-roads where, as a species, we need to make a collective choice: We can either continue on this same path of competition, degradation and quantitative thought or we can take an entirely new direction towards cooperation, healing and qualitative thought. The first merely requires us to continue placing our trust in our political leaders and to keep doing what we are already doing- even by "being the change".. The latter requires an unprecedented approach. To fundamentally alter the course of human society <i>as a whole</i> will require nothing less than intelligent, humble and innovative collaboration on a global scale.</p>
+                      <p>Today there are hundreds of millions of people and hundreds of thousands of groups around the world working to create a brighter future for all Life. We are in the midst of what has been called The Great Turning or The Great Transition. Most people and all the groups pioneering and guiding this Transition are connected to the World-Wide Web, thus there exists a clear, yet latent potential for us to work together for a common cause and vision.</p>
                       <p><i>But how to achieve global cooperation without a completely open, public and inclusive platform through which to unite in our collective intention?</i></p>
                       <p>A United Earth is a planetary initiative that has emerged through an online convergence of change-makers, concerned citizens and international organisations with this same intention: To create a global commons-based platform through which we, as individuals and groups, can all unite as free equals to serve a whole-systems transformation towards a human society that is based on freedom, harmony, equality, honesty, sharing, cooperation, ecological restoration and reverence for all Life.</p>
-                      <!--<div id="slider3">
-                        <img src="img/intro3-1.jpg">
-                        <img src="img/intro3-2.jpg">
-                        <img src="img/intro3-3.jpg">
-                        <img src="img/intro3-4.jpg">
-                        <img src="img/intro3-5.jpg">
-                        <img src="img/intro3-6.jpg">
-                        <img src="img/intro3-7.jpg">
-                        <img src="img/intro3-8.jpg">
-                        <img src="img/intro3-9.jpg">
-                        <img src="img/intro3-10.jpg">
-                        <img src="img/intro3-11.jpg">
-                        <img src="img/intro3-12.jpg">
-                      </div>-->
                       <p>We are open and committed to using all available tools, networks and technologies to effectively guide, support and promote our intentional global collaboration. The recent online net neutrality campaigns show the success humanity is capable of when many organisations concentrate together on accomplishing a common purpose.</p>
-                      <!--<div class="photos">
-                        <img src="img/intro4-1.jpg">
-                        <img src="img/intro4-2.jpg">
-                        <img src="img/intro4-3.jpg">
-                        <img src="img/intro4-4.jpg">
-                        <img src="img/intro4-5.jpg">
-                        <img src="img/intro4-6.jpg">
-                        <img src="img/intro4-7.jpg">
-                      </div>-->
                       <p>Here and now we are inviting each other, all existing movements and groups to join hands to create the greatest and most inclusive unification possible for humanity. We are dedicated to cooperating in equal partnership, pooling our collective intelligence to share our ideas and experiential knowledge about global and local transition strategies. Without needing to sacrifice or compromise our individual, organisational, religious or ethnic identity or autonomy, we add our support and creativity to an over-lighting, leaderless framework that upholds and facilitates our common values and aspirations into manifestation.</p>
                       <p>By uniting we are coming to recognise that between our wealth of indigenous wisdom, social innovations, ecological solutions and alternative political & economic models; we already have the knowledge, the skills, the tools, the technology, the resources, the mentors and the living examples to create a more beautiful world for everyone. Furthermore, it is through our committed and unified action of working together for our common purpose that we can effectively attract the attention of our entire Human Family to share this vital and uplifting news.</p>
-                      <div id="slider2_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
-                        <!-- Slides Container -->
-                        <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
-                            <div><img u="image" src="img/intro5-2.jpg" /></div>
-                            <div><img u="image" src="img/intro5-3.jpg" /></div>
-                            <div><img u="image" src="img/intro6-1.jpg" /></div>
-                        </div>
-                        <!-- Trigger -->
-                        <script>jssor_slider_starter('slider2_container');</script>
-                      </div>
                       <p>Yes, it is time to dream BIG- perhaps the biggest dream ever to enter our collective consciousness. Surely it is emerging now because we have reached a critical mass of women, men and children of goodwill and understanding, who share this timely vision of planetary unity and cooperation for a conscious cultural transformation.</p>
-                      <!--<div class="fifty-fifty clearfix">
-                        <img src="img/intro7-1.jpg">
-                        <img src="img/intro7-2.jpg">
-                      </div>-->
                       <p>Ultimately, the manifestation of this vision is simply a matter of collectively choosing it- which, in turn, depends on our willingness and our capacity to cooperate. Thus, the challenge of our time is essentially one of spiritual and emotional maturity- for us to rise above our prejudices and ideologies, to fully embrace our diversity, and to realise the greatest potential of our unified collaboration.</p>
                       <p>Be welcome. We are one Human Family.</p>
                     </div>
-                </div>
+
+                    <div class="introduction collapse" id="fr">
+                      <p>Le devenir de chaque Vie sur Terre est en jeu. L’humanité est maintenant à un tournant où, en tant qu’espèce, elle doit faire un choix collectif : nous pouvons soit continuer sur cette même voie de compétition, dégradation et d’approche quantitative de la vie ou nous pouvons prendre une direction entièrement nouvelle vers la coopération, la guérison et une approche qualitative de la vie. La première direction nous demande tout simplement de continuer à faire ce que nous faisons déjà – même en tant que créateurs de culture. La dernière demande une approche sans précédent ; transformer fondamentalement le cours de la société humaine dans son ensemble demandera rien de moins qu’intelligence, humilité, collaboration innovante sur une échelle planétaire.</p>
+                      <p>Il y a aujourd’hui des centaines de millions de personnes et des centaines de milliers de groupes autour du monde qui travaillent pour créer un avenir brillant pour toute Vie. Nous sommes au milieu de La Grande Transition. La plupart des gens et tous les groupes qui mènent et gouvernent cette Transition sont connectés à Internet. Il existe donc  un potentiel clair et encore latent pour nous de travailler ensemble pour une cause et une vision commune.</p>
+                      <p><i>Mais comment achever une coopération mondiale sans une plateforme complètement ouverte, publique et inclusive qui nous permettrait de nous unir dans notre intention collective ?</i></p>
+                      <p>Une Terre Unie est une initiative planétaire qui a émergé d’une convergence en ligne entre des acteurs du changement ; s’y retrouvent des citoyens et des organisations  avec la même intention : créer une plateforme mondiale, où nous, individus et groupes, pourrons tous nous unir, librement égaux, pour servir une transformation de l’ensemble du système  en une société humaine qui soit fondée sur la liberté, l’égalité, l’honnêteté, le partage, la coopération, la restauration écologique et la vénération pour toute Vie.</p>
+                      <p>Nous sommes ouverts et engagés à utiliser tous les outils, les réseaux et les technologies à disposition pour effectivement mener, supporter et promouvoir notre volonté de collaboration mondiale. La récente campagne en ligne de neutralité du Net montre de quel succès l’humanité est capable quand plusieurs organisations se concentrent ensemble pour accomplir un but commun.</p>
+                      <p>Ici et maintenant, nous invitons tout le monde, tous les mouvements et les groupes existants à nous donner la main pour créer l’unification la plus grande et la plus inclusive possible de toute l’humanité. Nous avons à cœur de coopérer sur un pied d’égalité, de mettre en commun notre intelligence collective pour partager nos idées et notre expérience sur les stratégies à suivre pour la transition mondiale. Sans avoir besoin de sacrifier ou de compromettre notre identité ou notre liberté individuelle, communautaire, religieuse ou ethnique, nous ajoutons notre soutien et notre créativité à un cadre éclairé et sans leader, cadre qui soutient et facilite la manifestation de nos valeurs et aspirations communes.</p>
+                      <p>En nous unifiant nous sommes amenés à reconnaître qu’au travers de la  richesse de notre sagesse indigène, de nos innovations sociales, de nos solutions écologiques et de nos modèles alternatifs économiques et politiques, nous avons déjà le savoir, les techniques, les outils, la technologie, les ressources, les guides et les exemples vivants pour créer un monde bien plus merveilleux pour tout le monde. Bien plus, c’est par  notre action  engagée et unifiée de travailler ensemble pour un but commun que nous pouvons attirer effectivement l’attention de toute notre Famille Humaine pour partager cette information vitale et inspirante.</p>
+                      <p>Oui, il est temps de penser GRAND- peut-être le plus grand rêve jamais fait pour entrer dans notre conscience collective. Assurément ce rêve émerge maintenant parce que nous avons atteint une masse critique de femmes, d’hommes et d’enfants de bonne volonté, qui partagent cette vision actuelle précise d’une unité et d’une coopération planétaire pour une transformation de notre conscience culturelle.</p>
+                      <p>Fondamentalement, la manifestation de cette vision est simplement  une question de choisir de le faire collectivement- ce qui, au passage, dépend de notre bienveillance et de notre capacité à coopérer. Ainsi, le défi de notre temps est essentiellement d’une nature spirituelle ou émotionnelle- il s’agit de dépasser nos préjugés et nos idéologies, d’embrasser pleinement notre diversité et de réaliser le très grand potentiel d’une collaboration unifiée.</p>
+                      <p>Bienvenue. Nous sommes une Famille Humaine.</p>
+                    </div>
+
+                    <div class="introduction collapse" id="es">
+                      <p>El bienestar de toda la Vida en la Tierra pende de un hilo. La humanidad se encuentra ahora en el meollo de una encrucijada evolutiva que, nos obliga como especie a hacer una elección colectiva : o podemos seguir por este camino actual y re-conocido de la competencia, de la desigualdad y de la degradación o podemos tomar una dirección completamente nueva hacia la cooperación , el intercambio y la restauración. El primero simplemente nos obliga a seguir poniendo nuestra confianza en nuestros líderes políticos y seguir haciendo lo que venimos haciendo desde siempre - incluso de "ser el cambio " . Este último requiere un enfoque sin precedentes. Para alterar fundamentalmente el curso de la sociedad humana en su conjunto se requerirá nada menos que la colaboración inteligente, humilde e innovadora en escala global.</p>
+                      <p>Hoy en día hay cientos de millones de personas y cientos de miles de grupos por todo el mundo que trabajan para crear un futuro mejor para toda la Vida . Estamos en el medio de lo que se ha llamado El Gran Cambio o La Gran Transición . La mayoría de las personas y de todos los grupos pioneros que guían esta transición están conectados por Internet , por lo cual existe un claro potencial , aún latente para  trabajar todos juntos hacía una causa y una visión común. </p>
+                      <p><i>Pero como sería la forma de lograr la cooperación mundial sin una plataforma completamente abierta , pública e inclusiva a través de la cual se une la gente  en nuestra intención colectiva?</i></p>
+                      <p>Un Reino Tierra es una iniciativa planetaria que ha surgido a través de una línea de convergencia de los agentes de cambio , los ciudadanos interesados ​​y las organizaciones internacionales con esta misma intención : Crear una plataforma basada en los bienes comunes globales a través de la cual nosotros, como individuos y grupos , donde todos podemos unirnos libremente es una forma que sirve para lograr la transformación de   sistemas enteros hacía una sociedad humana que tiene sus raíces en la libertad , la armonía , la igualdad , la honestidad , el intercambio , la cooperación, la restauración ecológica y la reverencia para la Vida en todos sus aspectos.</p>
+                      <p>Estamos abiertos y comprometidos a utilizar   todas las herramientas disponibles , redes y tecnologías para orientar de manera efectiva , el apoyo y la promoción de nuestra colaboración global intencional. Las campañas de neutralidad de la red en línea recientes muestran el éxito del cual la humanidad es capaz de lograr cuando muchas organizaciones se juntan detrás de un objetivo común.</p>
+                      <p>Hoy estamos invitando a Vds , todos los movimientos y grupos existentes, para que unan sus esfuerzos para crear de la manera mejor y más inclusive posible la unificación de la humanidad . Estamos dedicados a colaborar en una asociación igualitaria , unida con la inteligencia colectiva para compartir nuestras ideas y conocimiento experimental acerca de las estrategias de transición globales y locales . (Sin necesidad de sacrificar o comprometer nuestra persona , la identidad de la organización, religiosa o étnica o la autonomía , añadimos nuestro apoyo y creatividad a una , sin líderes marco sobre- iluminación que defiende y facilita a nuestros valores y aspiraciones comunes a la manifestación) Tell me what you are trying to say in English. This makes no sense.</p>
+                      <p>Uniéndonos estamos llegando a reconocer que entre nuestras riquezas de la sabiduría indígena , las innovaciones sociales , las soluciones ecológicas y los modelos políticos y económicos alternativos , ya tenemos el conocimiento , las habilidades, las herramientas, la tecnología , los recursos, los mentores y los ejemplos que nos da la vida para crear un mundo más hermoso para todos. Además, es a través de nuestra acción comprometida y unificada de trabajar juntos para nuestro propósito común que podemos atraer eficazmente la atención de toda nuestra familia humana para que comparta  esta noticia vital y edificante.</p>
+                      <p>Sí, es tiempo de soñar BIG/GRANDE - tal vez uno de los sueños más grandes que nunca que haya entrado en nuestra conciencia colectiva. Seguramente esté surgiendo ahora porque hemos alcanzado una masa crítica de mujeres, hombres y niños de buena voluntad y de ( comprensión/evolución?) , que comparten esta visión puntual de la unidad planetaria y de la cooperación para una transformación cultural consciente.</p>
+                      <p>En última instancia , la manifestación de esta visión es simplemente una cuestión de elegir colectivamente IT- que , a su vez , depende de nuestra voluntad y nuestra capacidad de cooperar. Por lo tanto , el reto de nuestro tiempo es esencialmente una de madurez espiritual y emocional en nosotros para elevarnos por encima de nuestros prejuicios e ideologías , para abrazar plenamente nuestra diversidad , y para darnos cuenta de la potencial mayor que nos ofrece una colaboración unificada.</p>
+                      <p>Que sean los bienvenidos en su regreso nuestra sola y única familia humana.</p>
+                    </div>
+
+                    <div class="introduction panel-collapse collapse" id="de">
+                      <p>Das Wohl allen Lebens auf der Erde steht auf dem Spiel. Die Menschheit ist an einem evolutionärem Scheideweg angekommen, an dem wir - als Spezies - eine kollektive Entscheidung treffen müssen: Wir können entweder weiter auf diesem Weg des Wettbewerbs, der Ungleichheit und der Degradierung bleiben oder wir richten uns grundsätzlich neu aus in Richtung Kooperation, Teilen und Erneuerung. Für ersteres reicht es damit fortzufahren unseren politischen Führeren zu vertrauen und weiter das zu tun, was wir bereits tun - auch wenn wir "den Wandel Leben". Letzteres jedoch erfordert einen völlig neuen Ansatz. Um den Kurs der gesamten Menschheit grundsätzlich zu ändern, benötigt es nichts geringeres als eine intelligente, von Achtung getragene und innovative Kollaboration auf globaler Ebene.</p>
+                      <p>Heutzutage arbeiten viele Millionen von Menschen und hunderttausende von Gruppen auf der ganzen Welt verteilt daran, eine strahlendende, glückliche Zukunft für das gesamte Leben zu schaffen. Wir sind mitten in einem Prozess, der bereits The Great Turning (die große Wende) oder The Great Transition (der große Übergang) genannt wird. Die meisten Menschen und alle Gruppen die diesen Wandeln hervorrufen und begleiten sind mit dem Internet verbunden - es existiert also ein klares, jedoch verborgenes Potential, aus welchem heraus wir alle zusammen an einer gemeinsamen Idee und Vision arbeiten.</p>
+                      <p><i>Aber wie wollen wir auf globaler Ebene kooperieren ohne eine vollständig offene, öffentliche umd teilhabende Plattform auf welcher wir uns in unserem gemeinsamen Vorhaben zusammenschließen können?</i></p>
+                      <p>United Earth ist eine planetare Initiative, die durch eine digitale Zusammenkunft von Change-Makern, besorgten Bürgern und internationalen Organisationen entstanden ist, welche alle die gleiche Intention teilen: nämlich eine globale und gemeinschaftliche Plattform ins Leben zu rufen, über welche wir uns als freie und gleichwertige Individuen und Gruppen vereinen können, um einen Systemwandel in Richtung einer in Freiheit, Harmonie, Gleichheit, Ehrlichkeit, Gerechtigkeit, Kooperation, ökologischer Wiederherstellung und Achtung allen Lebens basierten Gesellschaft voran zu treiben.</p>
+                      <p>Wir sind offen und entschlossen, alle verfügbaren Werkzeuge, Netze und Technologien zu nutzen, um unsere globale Zusammenarbeit effektiv anzuleiten, zu unterstützen und zu fördern. Die jüngsten online Netzneutralitäts-Kampagnen zeigen, welchen Erfolg die Menschheit erzielen kann, wenn viele Organisationen sich gemeinsam auf ein Ziel konzentrieren.</p>
+                      <p>Hier und jetzt laden wir jeden - alle bestehenden Bewegungen und Gruppen - ein, sich die Hände zu reichen, um die größtmöglichste und umfassendste Vereinigung der Menschheit ins Leben zu rufen. Wir widmen uns der Zusammenarbeit in einer gleichberechtigten Partnerschaft, der Bündelung unserer kollektiven Intelligenz, unserer Ideen und unseres Erfahrungswissens hinsichtlich globaler und lokaler Übergangsstrategien.</p>
+                      <p>Ohne unsere individuellen, organisatorischen, religiösen oder ethnischen Identitäten oder unsere Autonomie zu opfern oder zu gefährden, lassen wir unsere Unterstützung und unsere Kreativität einer übergeordneten, führerlosen Struktur zuteil werden, die die Manifestierung unserer gemeinsamen Werte und Bestrebungen aufrechterhält und erleichtert.</p>
+                      <p>Durch den Zusammenschluss erkennen wir, dass neben unserem Reichtumin an indigener Weisheit, sozialer Innovationen, ökologischer Lösungen und alternativen politischen und ökonomische Modellen, wir außerdem bereits das Wissen, die Fähigkeiten, die Werkzeuge, die Technologie, die Ressourcen, die Mentoren und die lebenden Beispiele dafür besitzen, um eine schönere Welt für alle zu erschaffen. Darüber hinaus sind es unsere engagierten und gemeinsamen Aktionen der Zusammenarbeit auf unser gemeinsames Ziel hin, welche die Aufmerksamkeit der ganzen Menschheit effektiv auf sich ziehen können, um so diese wichtigen und hoffnungsvollen Neuigkeiten zu verbreiten.</p>
+                      <p>Ja, es ist an der Zeit für große Träume - vielleicht für den größten Traum, welcher jemals in unser kollektives Bewusstsein eingetreten ist. Sicherlich entsteht dieser jetzt, weil wir nun eine kritische Masse an Frauen, Männern und Kindern erreicht haben, die genug Wohlwollen und Verständnis mitbringen und die rechtzeitig diese Vision der planetaren Einheit und Zusammenarbeit für eine bewusste kulturelle Transformation teilen.</p>
+                      <p>Letztlich ist die Umsetzung dieser Vision nur davon abhängig, sich kollektiv dazu zu entscheiden - was wiederum von unserer Bereitschaft und unserer Fähigkeit abhängt, zu kooperieren. So ist die Herausforderung unserer Zeit im wesentlichen eine der geistigen und emotionalen Reife. Reife, sich über unsere Vorurteile und Ideologien zu erheben, unsere Vielfalt vollkommen zu begrüßen, und das größte Potenzial unserer vereinigten Kollaboration zu realisieren.</p>
+                      <p>Sei willkommen. Wir sind eine große Menschenfamilie.</p>
+                    </div>
+              </div>
                 <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
