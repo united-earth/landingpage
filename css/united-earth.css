@@ -78,7 +78,12 @@ header.header img {
 }
 
 #quote{
-  background-color: #293351;
+  background-color: black;
+}
+
+#quote .background{
+  margin: 0 auto;
+  max-width: 1599px;
   color: white;
   padding: 65px 0;
   background: url(../img/unity.jpg) center;
