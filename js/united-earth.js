@@ -70,7 +70,7 @@ $( document ).ready(function() {
     $('#en-survey-button').addClass('btn-success');
   });
   $('#de-survey-button').click(function(){
-    $('#survey-iframe').prop('src', 'https://docs.google.com/forms/d/1GwT-nSoQac7Pg1Xa30wi-rSnJtfhAUnnHUGLZ1W024s/viewform?embedded=true');
+    $('#survey-iframe').prop('src', 'https://docs.google.com/forms/d/1ZK7zMrTejY00bWVgahgoFwujjIl8mvJc5f74xQj-me8/viewform?embedded=true');
     resetSurveyButtons();
     $('#de-survey-button').addClass('btn-success');
   });
