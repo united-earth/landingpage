@@ -4,9 +4,7 @@ $( document ).ready(function() {
   }
 
   $('#en-button').click(function(){
-    $('#de').collapse('hide');
-    $('#es').collapse('hide');
-    $('#fr').collapse('hide');
+    $('#about .introduction').collapse('hide');
     resetButtons();
     $('#en-button').addClass('btn-success');
     if($('#en').hasClass('in')){
@@ -18,9 +16,7 @@ $( document ).ready(function() {
   });
 
   $('#fr-button').click(function(){
-    $('#en').collapse('hide');
-    $('#de').collapse('hide');
-    $('#es').collapse('hide');
+    $('#about .introduction').collapse('hide');
     resetButtons();
     $('#fr-button').addClass('btn-success');
     if($('#fr').hasClass('in')){
@@ -32,10 +28,7 @@ $( document ).ready(function() {
   });
 
   $('#es-button').click(function(){
-    $('#es').collapse('show');
-    $('#en').collapse('hide');
-    $('#de').collapse('hide');
-    $('#fr').collapse('hide');
+    $('#about .introduction').collapse('hide');
     resetButtons();
     $('#es-button').addClass('btn-success');
     if($('#es').hasClass('in')){
@@ -46,10 +39,20 @@ $( document ).ready(function() {
       $('#es').collapse('show');
   });
 
+  $('#pt-button').click(function(){
+    $('#about .introduction').collapse('hide');
+    resetButtons();
+    $('#pt-button').addClass('btn-success');
+    if($('#pt').hasClass('in')){
+      resetButtons();
+      $('#pt').collapse('hide');
+    }
+    else
+      $('#pt').collapse('show');
+  });
+
   $('#de-button').click(function(){
-    $('#en').collapse('hide');
-    $('#es').collapse('hide');
-    $('#fr').collapse('hide');
+    $('#about .introduction').collapse('hide');
     resetButtons();
     $('#de-button').addClass('btn-success');
     if($('#de').hasClass('in')){
