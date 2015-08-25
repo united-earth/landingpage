@@ -72,9 +72,21 @@ $( document ).ready(function() {
     resetSurveyButtons();
     $('#en-survey-button').addClass('btn-success');
   });
+  $('#fr-survey-button').click(function(){
+    $('#survey-iframe').prop('src', 'https://docs.google.com/forms/d/1V8IFO2Vj8oYk7g-lWwaDJduD-Lh3rRpQzRVuOgY9SXc/viewform?embedded=true');
+    resetSurveyButtons();
+    $('#fr-survey-button').addClass('btn-success');
+  });
+  $('#pt-survey-button').click(function(){
+    $('#survey-iframe').prop('src', 'https://docs.google.com/forms/d/1TnzYvIfbtQgK9uyBYeu4Fg72z_DySW9C9sMPdLN_HUs/viewform?embedded=true');
+    resetSurveyButtons();
+    $('#pt-survey-button').addClass('btn-success');
+  });
   $('#de-survey-button').click(function(){
     $('#survey-iframe').prop('src', 'https://docs.google.com/forms/d/1ZK7zMrTejY00bWVgahgoFwujjIl8mvJc5f74xQj-me8/viewform?embedded=true');
     resetSurveyButtons();
     $('#de-survey-button').addClass('btn-success');
   });
+
+
 });
