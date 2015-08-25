@@ -82,6 +82,11 @@ $( document ).ready(function() {
     resetSurveyButtons();
     $('#pt-survey-button').addClass('btn-success');
   });
+  $('#es-survey-button').click(function(){
+    $('#survey-iframe').prop('src', 'https://docs.google.com/forms/d/1y3sGAQO5cV5awrCcvT9yFTgzya59uHDqv3RaCYFhe2M/viewform?embedded=true');
+    resetSurveyButtons();
+    $('#es-survey-button').addClass('btn-success');
+  });
   $('#de-survey-button').click(function(){
     $('#survey-iframe').prop('src', 'https://docs.google.com/forms/d/1ZK7zMrTejY00bWVgahgoFwujjIl8mvJc5f74xQj-me8/viewform?embedded=true');
     resetSurveyButtons();
