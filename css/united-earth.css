@@ -199,3 +199,7 @@ header.header img {
   font-size: 18px;
   font-style: italic;
 }
+
+.COINWIDGETCOM_CONTAINER span, .COINWIDGETCOM_CONTAINER a{
+  font-size: 8px;
+}
